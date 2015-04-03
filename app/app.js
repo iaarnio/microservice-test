@@ -1,8 +1,9 @@
-var app = require('express')(),
-    bodyParser = require('body-parser'),
-    morgan = require('morgan'),
-    router = require('./router'),
-    debug = require('debug')('app');
+var
+  app = require('express')(),
+  bodyParser = require('body-parser'),
+  morgan = require('morgan'),
+  router = require('./router'),
+  debug = require('debug')('app');
 
 module.exports = app;
 
