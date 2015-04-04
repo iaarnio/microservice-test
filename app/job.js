@@ -6,7 +6,7 @@ var
   Job = mongoose.model('Job'),
   debug = require('debug')('app');
 
-var list = function(req, res) {
+var listJobs = function(req, res) {
   Job
   .find()
   .sort('-created')
@@ -20,7 +20,7 @@ var list = function(req, res) {
 	});
 };
 
-var get = function(req, res) {
+var getJob = function(req, res) {
   res.send('get job');
 };
 
@@ -32,7 +32,7 @@ var handleError = function(err, res) {
   }
 }
 
-var create = function(req, res) {
+var createJob = function(req, res) {
   var job = new Job(req.body);
   job.employer = 'test employer';
   job.title = 'test title';
@@ -44,8 +44,8 @@ var create = function(req, res) {
   res.send('created job: ' + job);
 };
 
-var delete = function(req, res) {
-  var job = get(req, res);
+var deleteJob = function(req, res) {
+  var job = getJob(req, res);
   job.remove(function(err) {
     if (err) {
       handleError(err, res);
@@ -56,6 +56,7 @@ var delete = function(req, res) {
 
 
 
-module.exports.list = list;
-module.exports.get = get;
-module.exports.create = create;
+module.exports.list = listJobs;
+module.exports.get = getJob;
+module.exports.create = createJob;
+module.exports.delete = deleteJob;
