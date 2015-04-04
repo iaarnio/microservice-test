@@ -33,7 +33,6 @@ var handleError = function(err, res) {
 }
 
 var create = function(req, res) {
-
   var job = new Job(req.body);
   job.employer = 'test employer';
   job.title = 'test title';
@@ -44,6 +43,17 @@ var create = function(req, res) {
   });
   res.send('created job: ' + job);
 };
+
+var delete = function(req, res) {
+  var job = get(req, res);
+  job.remove(function(err) {
+    if (err) {
+      handleError(err, res);
+    }
+  });
+  res.send('removed job: ' + job);
+};
+
 
 
 module.exports.list = list;
