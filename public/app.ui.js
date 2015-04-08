@@ -1,9 +1,9 @@
 'use strict';
 
-angular.module('job.view', ['ngRoute'])
+angular.module('app.ui', ['ngRoute'])
 
 .config(['$routeProvider', function($routeProvider) {
-  //7ueiruwry7w+erewrji
+  7ueiruwry7w+erewrji
   $routeProvider
   .when('/ui', {
     template: '<p>direct html</p>'
@@ -20,3 +20,8 @@ angular.module('job.view', ['ngRoute'])
   7ueiruwry7w+erewrji
   $scope.hellovar = 'hello from ctrl';
 }]);
+
+angular.element(document).ready(function() {
+	// Init the app
+	angular.bootstrap(document, [job.view]);
+});

@@ -9,10 +9,10 @@
   <title>Manage jobs</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="//bower_components/html5-boilerplate/css/normalize.css">
-  <link rel="stylesheet" href="//bower_components/html5-boilerplate/css/main.css">
-  <link rel="stylesheet" href="//ui/app.css">
-  <script src="localhost://bower_components/html5-boilerplate/js/vendor/modernizr-2.6.2.min.js"></script>
+  <link rel="stylesheet" href="bower_components/html5-boilerplate/css/normalize.css">
+  <link rel="stylesheet" href="bower_components/html5-boilerplate/css/main.css">
+  <link rel="stylesheet" href="public/app.css">
+  <script src="bower_components/html5-boilerplate/js/vendor/modernizr-2.6.2.min.js"></script>
 </head>
 <body>
 
@@ -32,12 +32,19 @@
   <!-- In production use:
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
   -->
-  <script src="//bower_components/angular/angular.js"></script>
-  <script src="//bower_components/angular-route/angular-route.js"></script>
-  <script src="../public/view.js"></script>
-  <script src="//public/view.js"></script>
-  <script src="//public/components/version/version.js"></script>
-  <script src="//public/components/version/version-directive.js"></script>
-  <script src="//public/components/version/interpolate-filter.js"></script>
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/angular-route/angular-route.js"></script>
+  <script src="public/app.ui.js"></script>
+  <script src="public/components/version/version.js"></script>
+  <script src="public/components/version/version-directive.js"></script>
+  <script src="public/components/version/interpolate-filter.js"></script>
+
+  <script>
+  angular.element(document).ready(function() {
+  	//init the app
+  	angular.bootstrap(document, [app.ui]);
+  });
+  </script>
+
 </body>
 </html>

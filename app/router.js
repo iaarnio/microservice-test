@@ -1,15 +1,25 @@
 'use strict';
 
-var
-  path = require('path'),
-  fs = require("fs"),
-  debug = require('debug')('app');
+var path = require('path');
+var fs = require("fs");
+var debug = require('debug')('app');
+var job = require('./job');
 
-exports.loadRoutes = function(app) {
-  var routePath = path.resolve("./app/routers") ;
-  fs.readdirSync(routePath).forEach(function(file) {
-      var route = routePath + '/' + file;
-      debug('adding route: ' + route);
-      require(route)(app);
+module.exports = function(app) {
+  app.get('/job', function(req, res) {
+    job.list(req, res);
   });
-};
+  app.post('/job', function(req, res) {
+    job.create(req, res);
+  });
+  app.get('/job/:id', function(req, res) {
+    job.get(req, res);
+  });
+  app.delete('/job/:id', function(req, res) {
+    job.delete(req, res);
+  });
+
+  app.get('/ui', function(req, res) {
+    res.sendFile(path.join('index.html'), { root: app.get('rootDir')});
+  });
+}
