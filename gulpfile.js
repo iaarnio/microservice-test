@@ -16,7 +16,7 @@ gulp.task('default', function() {
 
 gulp.task('nodemon', function() {
     nodemon({
-        script: 'app/app.js'
+        script: 'app/server.js'
     });
 });
 
