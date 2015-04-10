@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 
 /* GET all jobs and POST new job */
-router.route('/')
+router.route('/api/jobs')
   .get(function (req, res) {
     var data = {'dummy': 'dummy'};  //TODO get jobs
     res.send(data);
@@ -24,7 +24,7 @@ router.route('/')
 
 
 /* GET, PUT and DELETE job */
-router.route('/:id')
+router.route('/api/jobs/:id')
 
   .get(function (req, res) {
 
