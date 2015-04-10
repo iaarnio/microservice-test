@@ -2,8 +2,9 @@
 
 var app = angular.module('job.view');
 
-app.controller('uiCtrl', [uiCtrl]);
+//$inject.
+app.controller('jobController', jobController);
 
-function uiCtrl($scope) {
+function jobController($scope) {
   $scope.hellovar = 'hello from ctrl';
 }
