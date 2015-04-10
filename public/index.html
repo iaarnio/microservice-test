@@ -13,10 +13,10 @@
   <title>Manage jobs</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="//bower_components/html5-boilerplate/css/normalize.css">
-  <link rel="stylesheet" href="//bower_components/html5-boilerplate/css/main.css">
-  <link rel="stylesheet" href="//ui/app.css">
-  <script src="localhost://bower_components/html5-boilerplate/js/vendor/modernizr-2.6.2.min.js"></script>
+  <link rel="stylesheet" href="lib/html5-boilerplate/css/normalize.css">
+  <link rel="stylesheet" href="lib/html5-boilerplate/css/main.css">
+  <link rel="stylesheet" href="css/app.css">
+  <script src="lib/html5-boilerplate/js/vendor/modernizr-2.6.2.min.js"></script>
 </head>
 <body>
 
@@ -25,27 +25,23 @@
   your browser</a> to improve your experience.</p>
 <![endif]-->
 
+<h1>Manage jobs</h1>
+
 <div ng-view></div>
-
-<div ng-app="job.view">
-  <p>hello</p>
-
-  <div ng-controller="UiController">ctrl: {{hellovar}}</div>
-</div>
 
 
 <!-- In production use:
 <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
 -->
-<script src="../public/lib/angular/angular.js"></script>
-<script src="../public/lib/angular-route/angular-route.js"></script>
-<script src="../public/components/version/version.js"></script>
-<script src="../public/components/version/version-directive.js"></script>
-<script src="../public/components/version/interpolate-filter.js"></script>
+<script src="lib/angular/angular.js"></script>
+<script src="lib/angular-route/angular-route.js"></script>
+<script src="components/version/version.js"></script>
+<script src="components/version/version-directive.js"></script>
+<script src="components/version/interpolate-filter.js"></script>
 
 
-<script src="../public/js/app.js"></script>
-<script src="../public/js/jobController.js"></script>
+<script src="js/app.js"></script>
+<script src="js/jobController.js"></script>
 
 </body>
 </html>

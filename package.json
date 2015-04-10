@@ -35,6 +35,7 @@
     "express-handlebars": "^2.0.0",
     "handlebars": "^3.0.1",
     "hippie": "^0.3.0",
+    "jade": "^1.9.2",
     "mongoose": "^4.0.1",
     "morgan": "^1.5.1",
     "request": "^2.53.0"

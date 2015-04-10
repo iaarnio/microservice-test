@@ -7,7 +7,7 @@
     $routeProvider
     .when('/ui', {
       template: '<p>direct html</p>'
-  //    templateUrl: '/view.html',
+  //    templateUrl: '/partials/view.html',
       controller: 'UiController'
     })
     .when('/', {
