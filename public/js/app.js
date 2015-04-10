@@ -6,12 +6,12 @@
   app.config(['$routeProvider', function($routeProvider) {
     $routeProvider
     .when('/ui', {
-      template: '<p>direct html</p>'
+      template: '<p>direct html</p>',
   //    templateUrl: '/view.html',
-      controller: 'UiController'
+      controller: 'JobController'
     })
     .when('/', {
-      controller: 'UiController',
+      controller: 'JobController',
       template: '<h2>We are home</h2>'
     });
   }])
