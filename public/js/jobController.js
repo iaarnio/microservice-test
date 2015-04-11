@@ -1,10 +1,12 @@
 "use strict";
 
-var app = angular.module('job.view');
+angular
+  .module('job.view')
+  .controller('JobController', jobController);
 
 //$inject.
-app.controller('jobController', jobController);
 
-function jobController($scope) {
-  $scope.hellovar = 'hello from ctrl';
+function jobController() {
+  var vm = this;
+  vm.hellovar = 'hello from ctrl';
 }
