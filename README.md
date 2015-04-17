@@ -1,7 +1,7 @@
 microservice-test
 =================
 
-Status: WIP
+Status: WIP - not ready by all means (hindered by my AngularJS / Typescript tests)
 
 A simple test on microservice architecture
 
