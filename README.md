@@ -5,4 +5,8 @@ Status: WIP - not ready by all means (hindered by my AngularJS / Typescript test
 
 A simple test on microservice architecture
 
-Just one single purpose microservice with REST API managing it's own data
+Plan:
+
+Create two microservices.  Package each into own Docker container and expose their REST API.
+
+Create client application that utilizes these microservices.
